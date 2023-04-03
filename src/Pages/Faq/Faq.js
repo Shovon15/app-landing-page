@@ -5,6 +5,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import SectionTitle from "../../Components/Text/SectionTitle";
+import faqImg from "../../assets/section icons/faq.png";
 
 export default function Faq() {
   const [open, setOpen] = useState(0);
@@ -37,6 +38,7 @@ export default function Faq() {
 
   return (
     <div id="faq" className="min-h-screen bg-indigo-100 px-10 py-10  md:px-40">
+      <img src={faqImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle title="FAQ!" />
 
       <Fragment>

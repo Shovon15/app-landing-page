@@ -2,7 +2,9 @@ import { Button } from "@material-tailwind/react";
 import React from "react";
 
 const PrimaryButton = ({ className, children }) => {
-  return <Button className={`${className}   `}>{children}</Button>;
+  return (
+    <Button className={`${className} bg-buttonColor   `}>{children}</Button>
+  );
 };
 
 export default PrimaryButton;

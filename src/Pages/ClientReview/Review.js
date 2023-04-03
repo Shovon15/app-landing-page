@@ -1,9 +1,10 @@
 import React from "react";
 
 import Carousel from "react-elastic-carousel";
-import avatar1 from "../../assets//review/user5.jpg";
-import avatar2 from "../../assets//review/user6.jpg";
-import avatar3 from "../../assets//review/user4.jpg";
+import avatar1 from "../../assets/review/user5.jpg";
+import avatar2 from "../../assets/review/user6.jpg";
+import avatar3 from "../../assets/review/user4.jpg";
+import clientImg from "../../assets/section icons/client.png";
 
 import SectionTitle from "../../Components/Text/SectionTitle";
 import CarouselCard from "../../Components/Card/CarouselCard";
@@ -64,6 +65,27 @@ const Review = () => {
       review: 5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
+    {
+      avatar: avatar3,
+      name: "Omar Hodge",
+      desig: "Lorem Ipsum",
+      review: 4.5,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+    {
+      avatar: avatar2,
+      name: "Ellis Jarvis",
+      desig: "Lorem Ipsum is",
+      review: 4.5,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+    {
+      avatar: avatar3,
+      name: "Jenny Stein",
+      desig: "Lorem Ipsum ",
+      review: 5,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
   ];
 
   const breakPoints = [
@@ -81,14 +103,12 @@ const Review = () => {
     },
     {
       width: 1000,
-      itemsToShow: 2,
+      itemsToShow: 3,
     },
   ];
   return (
-    <div
-      id="review"
-      className="py-5 md:px-10 md:py-10 min-h-screen bg-slate-100"
-    >
+    <div id="review" className=" min-h-screen bg-slate-100 ">
+      <img src={clientImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle title="Client Review" />
       <Carousel
         breakPoints={breakPoints}
@@ -103,7 +123,7 @@ const Review = () => {
         autoPlaySpeed={2500}
         onNextEnd={({ index }) => {
           console.log("index", index, "length", items.length);
-          if (index === 4) {
+          if (index === 6) {
             clearTimeout(resetTimeout);
             resetTimeout = setTimeout(() => {
               carouselRef?.current?.goTo(0);

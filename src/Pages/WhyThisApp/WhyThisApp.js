@@ -5,6 +5,7 @@ import { BsBug } from "react-icons/bs";
 import { MdOutlineScreenshotMonitor } from "react-icons/md";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { BsFileEarmarkCode } from "react-icons/bs";
+import softwareImg from "../../assets/section icons/softawre.png";
 
 // import WhyUseCard from "../../../Components/Card/WhyUseCard";
 // import SectionHeading from "../../../Components/Text/SectionHeading";
@@ -35,14 +36,15 @@ const WhyThisApp = () => {
   return (
     <div
       id="why_this_app"
-      className="px-5 md:px-12 py-5 md:py-10  min-h-screen bg-gray-200"
+      className="px-5 md:px-12 py-5 md:py-10  min-h-screen bg-gray-100"
     >
+      <img src={softwareImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle
         title="Why you will choose
                 our software?"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10">
         {items.map((item, i) => (
           <WhyUseCard key={i} item={item} />
         ))}

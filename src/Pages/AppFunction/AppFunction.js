@@ -12,6 +12,7 @@ import img1 from "../../assets/screen/ss1.png";
 import img2 from "../../assets/screen/ss3.png";
 import img3 from "../../assets/screen/ss4.png";
 import bgImg from "../../assets/screen/mok-i-phone.png";
+import appImg from "../../assets/section icons/how-app-work.png";
 import SectionTitle from "../../Components/Text/SectionTitle";
 import Square from "./Square";
 import Flex from "./Flex";
@@ -29,7 +30,8 @@ const AppFunction = () => {
   //     },
   //   ];
   return (
-    <div id="how_its_work" className=" min-h-screen p-0 ">
+    <div id="how_its_work" className=" min-h-screen p-0 bg-gray-200">
+      <img src={appImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle title="How App Works" />
 
       <div className="flex relative w-4/5">

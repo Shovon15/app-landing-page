@@ -28,7 +28,7 @@ const TypeAnimationText = () => {
         wrapper="span"
         cursor={true}
         repeat={Infinity}
-        style={{ display: "inline-block", color: "#2196F3" }}
+        style={{ display: "inline-block", color: "#3949AB" }}
       />
     </span>
   );
