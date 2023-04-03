@@ -1,0 +1,122 @@
+import React from "react";
+
+import Carousel from "react-elastic-carousel";
+import avatar1 from "../../assets//review/user5.jpg";
+import avatar2 from "../../assets//review/user6.jpg";
+import avatar3 from "../../assets//review/user4.jpg";
+
+import SectionTitle from "../../Components/Text/SectionTitle";
+import CarouselCard from "../../Components/Card/CarouselCard";
+// import avatar2 from "../../assets/review/user5.jpg";
+// import avatar3 from "../../assets/review/user6.jpg";
+// import avatar4 from "../../assets/review/user5.jpg";
+// import avatar5 from "../../assets/review/user4.jpg";
+// import avatar6 from "../../assets/review/user5.jpg";
+// import Item from "./Item";
+// import Card from "../../Components/Carousel/Card";
+// import SectionHeading from "../../Components/Text/SectionHeading";
+const carouselRef = React.createRef(null); // declare at state level
+// let resetTimeout; //decalre at state level
+
+const Review = () => {
+  let resetTimeout;
+
+  const items = [
+    {
+      avatar: avatar1,
+      name: "Danny Sims",
+      desig: "Lorem Ipsum",
+      review: 4,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+    {
+      avatar: avatar2,
+      name: "John Smith",
+      desig: "Lorem Ipsum is",
+      review: 4.5,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+    {
+      avatar: avatar1,
+      name: "Taya Barr",
+      desig: "Lorem Ipsum is",
+      review: 3.2,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+    {
+      avatar: avatar3,
+      name: "Omar Hodge",
+      desig: "Lorem Ipsum",
+      review: 4.5,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+    {
+      avatar: avatar2,
+      name: "Ellis Jarvis",
+      desig: "Lorem Ipsum is",
+      review: 4.5,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+    {
+      avatar: avatar3,
+      name: "Jenny Stein",
+      desig: "Lorem Ipsum ",
+      review: 5,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+    },
+  ];
+
+  const breakPoints = [
+    {
+      width: 1,
+      itemsToShow: 1,
+    },
+    {
+      width: 550,
+      itemsToShow: 2,
+    },
+    {
+      width: 768,
+      itemsToShow: 2,
+    },
+    {
+      width: 1000,
+      itemsToShow: 2,
+    },
+  ];
+  return (
+    <div
+      id="review"
+      className="py-5 md:px-10 md:py-10 min-h-screen bg-slate-100"
+    >
+      <SectionTitle title="Client Review" />
+      <Carousel
+        breakPoints={breakPoints}
+        ref={carouselRef}
+        enableMouseSwipe={true}
+        // itemsToShow={3}
+        itemsToScroll={1}
+        // renderArrow={myArrow}
+        pagination={false}
+        // renderPagination={myPagination}
+        enableAutoPlay={true}
+        autoPlaySpeed={2500}
+        onNextEnd={({ index }) => {
+          console.log("index", index, "length", items.length);
+          if (index === 4) {
+            clearTimeout(resetTimeout);
+            resetTimeout = setTimeout(() => {
+              carouselRef?.current?.goTo(0);
+            }, 2000); // same time
+          }
+        }}
+      >
+        {items.map((item, i) => (
+          <CarouselCard key={i} item={item} />
+        ))}
+      </Carousel>
+    </div>
+  );
+};
+
+export default Review;
