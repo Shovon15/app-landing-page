@@ -11,8 +11,9 @@ const FeatureCard = ({ item }) => {
      hover:bg-white cursor-pointer rounded-lg hover:text-slate-700"
     >
       <div
-        className={`mx-auto
-        w-20 h-20 p-4 rounded-full text-5xl text-white bg-${color}-600 `}
+        style={{ backgroundColor: `${color}` }}
+        className="mx-auto
+        w-20 h-20 p-4 rounded-full text-5xl text-white"
       >
         {icon}
       </div>
@@ -24,3 +25,5 @@ const FeatureCard = ({ item }) => {
 };
 
 export default FeatureCard;
+
+// bg-${color}-600

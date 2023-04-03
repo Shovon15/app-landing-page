@@ -5,6 +5,7 @@ import React from "react";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { VscFileCode } from "react-icons/vsc";
 import { VscLayers } from "react-icons/vsc";
+import { BsCheckCircle } from "react-icons/bs";
 import { MdOutlineSpeed } from "react-icons/md";
 import SectionTitle from "../../Components/Text/SectionTitle";
 import FeatureCard from "../../Components/Card/FeatureCard";
@@ -13,6 +14,21 @@ import featureImg from "../../assets/section icons/features.png";
 import { Typography } from "@material-tailwind/react";
 
 const Features = () => {
+  const check = [
+    {
+      icon: <BsCheckCircle />,
+      text: "Lorem Ipsum is simply dummy text",
+    },
+    {
+      icon: <BsCheckCircle />,
+      text: "Lorem Ipsum is simply dummy text",
+    },
+    {
+      icon: <BsCheckCircle />,
+      text: "Lorem Ipsum is simply dummy text",
+    },
+  ];
+
   const items = [
     {
       icon: <VscWorkspaceTrusted />,
@@ -67,6 +83,16 @@ const Features = () => {
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </Typography>
+        <div>
+          {check.map((item, i) => (
+            <div className="flex justify-start items-center gap-5 m-8">
+              <span className="text-4xl hover:text-blue-700">{item.icon}</span>
+              <Typography className="text-start" variant="h6">
+                {item.text}
+              </Typography>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="w-7/12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-10/12 mx-auto my-10">
