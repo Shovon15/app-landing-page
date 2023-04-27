@@ -28,7 +28,7 @@ const Nav = () => {
         spy={true}
         smooth={true}
         activeClass="active"
-        offset={-78}
+        offset={-70}
         duration={500}
         className="text-gray-800 hover:text-blue-500 duration-500 cursor-pointer "
       >
@@ -41,7 +41,7 @@ const Nav = () => {
           spy={true}
           activeClass="active"
           smooth={true}
-          offset={-70}
+          offset={-50}
           duration={500}
           className="text-gray-800 hover:text-blue-500  duration-500"
         >
@@ -54,7 +54,7 @@ const Nav = () => {
           spy={true}
           activeClass="active"
           smooth={true}
-          offset={-70}
+          offset={-50}
           duration={500}
           className="text-gray-800 hover:text-blue-500  duration-500"
         >
@@ -67,7 +67,7 @@ const Nav = () => {
           spy={true}
           smooth={true}
           activeClass="active"
-          offset={-70}
+          offset={-50}
           duration={500}
           className="text-gray-800  hover:text-blue-500  duration-500"
         >
@@ -80,7 +80,7 @@ const Nav = () => {
           spy={true}
           smooth={true}
           activeClass="active"
-          offset={-70}
+          offset={-50}
           duration={500}
           className="text-gray-800  hover:text-blue-500  duration-500"
         >
@@ -93,7 +93,7 @@ const Nav = () => {
           spy={true}
           activeClass="active"
           smooth={true}
-          offset={-70}
+          offset={-50}
           duration={500}
           className="text-gray-800 hover:text-blue-500  duration-500"
         >

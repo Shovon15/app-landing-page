@@ -71,8 +71,8 @@ const Features = () => {
     //     ))}
     //   </div>
     // </div>
-    <div id="feature" className="flex min-h-screen  ">
-      <div className="w-5/12 p-6">
+    <div id="feature" className="flex flex-col md:flex-row min-h-max">
+      <div className="w-full md:w-5/12 p-6">
         <img src={featureImg} alt="..." className="w-20 m-1" />
         <Typography className="text-start text-indigo-600 pb-2" variant="h3">
           Awesome Apps Features
@@ -85,7 +85,7 @@ const Features = () => {
         </Typography>
         <div>
           {check.map((item, i) => (
-            <div className="flex justify-start items-center gap-5 m-8">
+            <div className="flex justify-start items-center gap-2 m-3 md:gap-5 md:m-8">
               <span className="text-4xl hover:text-blue-700">{item.icon}</span>
               <Typography className="text-start" variant="h6">
                 {item.text}
@@ -94,7 +94,7 @@ const Features = () => {
           ))}
         </div>
       </div>
-      <div className="w-7/12">
+      <div className="w-full md:w-7/12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-10/12 mx-auto my-10">
           {items.map((item, i) => (
             <FeatureCard key={i} item={item} />

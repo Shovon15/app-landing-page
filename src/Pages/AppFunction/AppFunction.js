@@ -30,7 +30,10 @@ const AppFunction = () => {
   //     },
   //   ];
   return (
-    <div id="how_its_work" className=" min-h-screen p-0 bg-gray-200">
+    <div
+      id="how_its_work"
+      className=" min-h-screen p-0 hidden md:block bg-gray-200"
+    >
       <img src={appImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle title="How App Works" />
 

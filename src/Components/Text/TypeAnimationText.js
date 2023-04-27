@@ -3,12 +3,12 @@ import { TypeAnimation } from "react-type-animation";
 const TypeAnimationText = () => {
   return (
     <span
-      style={{
-        fontSize: "4em",
-
-        fontWeight: "bold",
-        wordWrap: "break-word",
-      }}
+      className="font-bold text-3xl md:text-5xl break-words"
+      // style={{
+      //   fontSize: "2rem",
+      //   fontWeight: "bold",
+      //   wordWrap: "break-word",
+      // }}
     >
       <span>
         The new website for <br />

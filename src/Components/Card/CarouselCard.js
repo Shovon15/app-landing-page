@@ -1,4 +1,5 @@
 import React from "react";
+import "./CarouselCard.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
@@ -24,7 +25,7 @@ const CarouselCard = ({ item }) => {
   // console.log(ratingStar);
   return (
     <>
-      <div className="card  w-[520px] h-[350px] bg-white   rounded-lg shadow-xl m-2 p-5 hover:shadow-xl">
+      <div className="card w-[520px] h-[350px] bg-white rounded-lg shadow-none m-2 p-5 hover:shadow-md">
         {/* <div className="px-5 w-full text-center border hover:border-white hover:shadow-xl hover:bg-white cursor-pointer rounded-lg hover:text-slate-700"> */}
         <div className="flex justify-between items-center">
           <div>

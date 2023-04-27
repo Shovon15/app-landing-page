@@ -14,15 +14,13 @@ const Banner = () => {
         backgroundSize: "cover",
         width: "auto",
       }}
-      className="flex flex-col lg:flex-row px-5 md:px-10 bg-slate-300  py-10 lg:py-0  min-h-screen"
+      className="flex flex-col lg:flex-row px-5 md:px-10 bg-slate-300  py-10 lg:py-0  min-h-max"
     >
       <div className="w-full lg:w-13/24 flex flex-col justify-center px-0">
         <TypeAnimationText />
-
-        <p className="text-lg text-start  text-wrap py-2">
+        <p className="text-lg  text-center  text-wrap py-2">
           DealDone enables vendors to connect Multiple Carts Online Marketplaces
-          & Shopping inventory. Carts to manage Multiple Online inventory
-          Marketplaces & Shopping to manage
+          & Shopping inventory. Carts to manage Multiple Online inventory.
         </p>
 
         <PrimaryButton className="md:mr-auto my-2 py-4 px-8 rounded-full  text-md">

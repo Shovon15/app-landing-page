@@ -3,7 +3,7 @@ import React from "react";
 
 const SectionTitle = ({ className, title }) => {
   return (
-    <div className="w-8/12 mx-auto">
+    <div className="w-full md:w-8/12 mx-auto">
       <Typography
         className={`${className} text-3xl text-indigo-600 font-bold py-2`}
         variant="h1"

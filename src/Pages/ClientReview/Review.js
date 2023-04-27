@@ -107,8 +107,8 @@ const Review = () => {
     },
   ];
   return (
-    <div id="review" className=" min-h-screen bg-slate-100 ">
-      <img src={clientImg} alt="..." className="w-20 m-1 mx-auto" />
+    <div id="review" className="min-h-max bg-slate-100 py-5">
+      <img src={clientImg} alt="..." className="w-20  mx-auto" />
       <SectionTitle title="Client Review" />
       <Carousel
         breakPoints={breakPoints}
