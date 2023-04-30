@@ -23,7 +23,7 @@ const Banner = () => {
           & Shopping inventory. Carts to manage Multiple Online inventory.
         </p>
 
-        <PrimaryButton className="md:mr-auto my-2 py-4 px-8 rounded-full  text-md">
+        <PrimaryButton className="mx-auto my-2 py-3 md:py-4 px-5 md:px-8 rounded-full text-md">
           Start Free Trial
         </PrimaryButton>
       </div>

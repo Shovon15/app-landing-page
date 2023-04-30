@@ -37,7 +37,7 @@ export default function Faq() {
   };
 
   return (
-    <div id="faq" className="min-h-max bg-indigo-100  p-5 md:px-40">
+    <div id="faq" className="min-h-max bg-indigo-100  p-10 md:px-40">
       <img src={faqImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle title="FAQ!" />
 

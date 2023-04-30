@@ -36,7 +36,7 @@ const WhyThisApp = () => {
   return (
     <div
       id="why_this_app"
-      className="px-5 md:px-12 py-5 md:py-10  min-h-screen bg-gray-100"
+      className="px-5 md:px-12 py-5 md:py-10  min-h-max bg-gray-100"
     >
       <img src={softwareImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle

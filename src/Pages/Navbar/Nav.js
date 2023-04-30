@@ -13,6 +13,7 @@ import "./Nav.css";
 
 const Nav = () => {
   const [openNav, setOpenNav] = React.useState(false);
+  console.log(openNav);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -153,13 +154,9 @@ const Nav = () => {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <MobileNav className="flex flex-col" open={openNav}>
           {navList}
-          <PrimaryButton
-            variant="gradient"
-            fullWidth
-            className="rounded-full mx-0"
-          >
+          <PrimaryButton variant="gradient" fullWidth className="rounded-full ">
             Get Started
           </PrimaryButton>
           {/* <Button variant="gradient" size="sm" className="mb-2">
