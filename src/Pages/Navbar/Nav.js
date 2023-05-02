@@ -23,7 +23,7 @@ const Nav = () => {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-4 flex flex-col gap-4  lg:mb-0 lg:mt-0 lg:flex-row items-start lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-4 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row items-start lg:items-center">
       <Link
         to="home"
         spy={true}
@@ -31,76 +31,70 @@ const Nav = () => {
         activeClass="active"
         offset={-70}
         duration={500}
-        className="text-gray-800 hover:text-blue-500 duration-500 cursor-pointer "
+        className="text-gray-800 hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
       >
         Home
       </Link>
 
-      <li className=" cursor-pointer">
-        <Link
-          to="feature"
-          spy={true}
-          activeClass="active"
-          smooth={true}
-          offset={-50}
-          duration={500}
-          className="text-gray-800 hover:text-blue-500  duration-500"
-        >
-          Feature
-        </Link>
-      </li>
-      <li className=" cursor-pointer">
-        <Link
-          to="how_its_work"
-          spy={true}
-          activeClass="active"
-          smooth={true}
-          offset={-50}
-          duration={500}
-          className="text-gray-800 hover:text-blue-500  duration-500"
-        >
-          How it's work
-        </Link>
-      </li>
-      <li className=" cursor-pointer">
-        <Link
-          to="why_this_app"
-          spy={true}
-          smooth={true}
-          activeClass="active"
-          offset={-50}
-          duration={500}
-          className="text-gray-800  hover:text-blue-500  duration-500"
-        >
-          Why this app
-        </Link>
-      </li>
-      <li className="cursor-pointer">
-        <Link
-          to="review"
-          spy={true}
-          smooth={true}
-          activeClass="active"
-          offset={-50}
-          duration={500}
-          className="text-gray-800  hover:text-blue-500  duration-500"
-        >
-          Review's
-        </Link>
-      </li>
-      <li className=" cursor-pointer">
-        <Link
-          to="faq"
-          spy={true}
-          activeClass="active"
-          smooth={true}
-          offset={-50}
-          duration={500}
-          className="text-gray-800 hover:text-blue-500  duration-500"
-        >
-          FAQ
-        </Link>
-      </li>
+      <Link
+        to="feature"
+        spy={true}
+        activeClass="active"
+        smooth={true}
+        offset={-50}
+        duration={500}
+        className="text-gray-800 hover:text-blue-500 font-semibold  duration-500 cursor-pointer p-1"
+      >
+        Feature
+      </Link>
+
+      <Link
+        to="how_its_work"
+        spy={true}
+        activeClass="active"
+        smooth={true}
+        offset={-50}
+        duration={500}
+        className="text-gray-800 hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+      >
+        How it's work
+      </Link>
+
+      <Link
+        to="why_this_app"
+        spy={true}
+        smooth={true}
+        activeClass="active"
+        offset={-50}
+        duration={500}
+        className="text-gray-800  hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+      >
+        Why this app
+      </Link>
+
+      <Link
+        to="review"
+        spy={true}
+        smooth={true}
+        activeClass="active"
+        offset={-50}
+        duration={500}
+        className="text-gray-800  hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+      >
+        Review's
+      </Link>
+
+      <Link
+        to="faq"
+        spy={true}
+        activeClass="active"
+        smooth={true}
+        offset={-50}
+        duration={500}
+        className="text-gray-800 hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+      >
+        FAQ
+      </Link>
     </ul>
   );
 
@@ -109,7 +103,7 @@ const Nav = () => {
       <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-3">
         <div className="flex items-center justify-between text-blue-gray-900">
           <img className="w-10" src={logo} alt="..." />
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <PrimaryButton className="rounded-full text-sm hidden lg:inline-block">
               Get Started
