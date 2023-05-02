@@ -8,18 +8,9 @@ import clientImg from "../../assets/section icons/client.png";
 
 import SectionTitle from "../../Components/Text/SectionTitle";
 import CarouselCard from "../../Components/Card/CarouselCard";
-// import avatar2 from "../../assets/review/user5.jpg";
-// import avatar3 from "../../assets/review/user6.jpg";
-// import avatar4 from "../../assets/review/user5.jpg";
-// import avatar5 from "../../assets/review/user4.jpg";
-// import avatar6 from "../../assets/review/user5.jpg";
-// import Item from "./Item";
-// import Card from "../../Components/Carousel/Card";
-// import SectionHeading from "../../Components/Text/SectionHeading";
-const carouselRef = React.createRef(null); // declare at state level
-// let resetTimeout; //decalre at state level
 
 const Review = () => {
+  const carouselRef = React.createRef(null);
   let resetTimeout;
 
   const items = [
@@ -122,7 +113,7 @@ const Review = () => {
         enableAutoPlay={true}
         autoPlaySpeed={2500}
         onNextEnd={({ index }) => {
-          console.log("index", index, "length", items.length);
+          // console.log("index", index, "length", items.length);
           if (index === 6) {
             clearTimeout(resetTimeout);
             resetTimeout = setTimeout(() => {

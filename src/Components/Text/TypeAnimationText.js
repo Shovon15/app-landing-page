@@ -22,7 +22,7 @@ const TypeAnimationText = () => {
           2000, // Waits 2s
           "screenshoot", // Types 'Three' without deleting 'Two'
           () => {
-            console.log("Sequence completed");
+            // console.log("Sequence completed");
           },
         ]}
         wrapper="span"

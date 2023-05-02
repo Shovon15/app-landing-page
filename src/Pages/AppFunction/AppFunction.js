@@ -1,3 +1,4 @@
+import React from "react";
 import Carousel from "react-elastic-carousel";
 import "./AppFunction.css";
 import SectionTitle from "../../Components/Text/SectionTitle";
@@ -13,20 +14,8 @@ import appImg from "../../assets/section icons/how-app-work.png";
 import bgImg from "../../assets/screen/mok-i-phone.png";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useRef } from "react";
 
 const AppFunction = () => {
-  // console.log(window.innerWidth);
-  // const [windowWidth, setWindowWidth] = useState(0);
-  // console.log(windowWidth);
-
-  // useEffect(() => {
-  //   window.addEventListener(
-  //     "resize",
-  //     () => window.innerWidth >= 960 && setWindowWidth(false)
-  //   );
-  // }, []);
-
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
@@ -44,14 +33,12 @@ const AppFunction = () => {
     };
   }, []);
 
-  console.log(windowSize[0]);
+  const carouselRef = React.createRef(null);
+  let resetTimeout;
+  // console.log(carouselRef);
 
-  const styles = {
-    popup: {
-      display: "flex",
-      flexDirection: "flex-row",
-    },
-  };
+  // console.log(windowSize[0]);
+
   return (
     <div id="how_its_work" className=" min-h-max py-5 md:py-5 bg-gray-200">
       <img src={appImg} alt="..." className="w-20 m-1 mx-auto" />
@@ -63,6 +50,19 @@ const AppFunction = () => {
           style={{
             display: "flex",
             flexDirection: `${windowSize[0] > 960 ? "row " : "column-reverse"}`,
+          }}
+          ref={carouselRef}
+          enableAutoPlay={true}
+          autoPlaySpeed={2000}
+          onNextEnd={({ index }) => {
+            console.log("index", index);
+            // if (index === 9) {
+            if (index === 2) {
+              clearTimeout(resetTimeout);
+              resetTimeout = setTimeout(() => {
+                carouselRef?.current?.goTo(0);
+              }, 2000); // same time
+            }
           }}
           renderPagination={({ pages, activePage, onClick }) => {
             return (
