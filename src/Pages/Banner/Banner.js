@@ -1,34 +1,46 @@
-import { Button } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 import React from "react";
 import background from "../../assets/banner/imageedit_5_6379001357.jpg";
 import banner from "../../assets/banner/slider-moc-2-1.png";
 import PrimaryButton from "../../Components/Button/PrimaryButton";
 import TypeAnimationText from "../../Components/Text/TypeAnimationText";
+import video from "../../assets/video/Autodemo - The Explainer and Demo Video Leader..mp4";
 
 const Banner = () => {
   return (
     <div
       id="home"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        width: "auto",
-      }}
-      className="flex flex-col lg:flex-row px-5 md:px-10 bg-slate-300  py-10 lg:py-0  min-h-max"
+      className="flex flex-col lg:flex-row px-5 md:px-10 bg-slate-300  py-10 lg:py-10  min-h-max"
     >
-      <div className="w-full lg:w-13/24 flex flex-col justify-center px-0">
-        <TypeAnimationText />
-        <p className="text-lg  text-center  text-wrap py-2">
-          DealDone enables vendors to connect Multiple Carts Online Marketplaces
-          & Shopping inventory. Carts to manage Multiple Online inventory.
+      <div className="w-full lg:w-13/24 flex flex-col justify-center p-2 gap-4">
+        <p className="font-extrabold text-start text-4xl md:text-6xl">
+          Accounting and <span className="text-primary">business</span> all in
+          one place
+        </p>
+        <p className="text-lg text-start  text-wrap py-2">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took.
         </p>
 
-        <PrimaryButton className="mx-auto my-2 py-3 md:py-4 px-5 md:px-8 rounded-full text-md">
-          Start Free Trial
-        </PrimaryButton>
+        <div className="flex flex-col md:flex-row mx-auto md:mx-0 gap-4">
+          <Button variant="content" className="bg-buttonColor ">
+            Start A Free Trial
+          </Button>
+          <Button
+            variant="outlined"
+            ripple="dark"
+            className="border-buttonColor text-buttonColor  focus:ring-0"
+          >
+            Request A Demo
+          </Button>
+        </div>
       </div>
-      <div className="w-full lg:w-11/24 md:p-5 mt-12">
-        <img src={banner} alt="..." />
+      <div className="w-full lg:w-11/24 md:p-2 mt-2 md:mt-0">
+        <video className="h-full w-full rounded-lg" controls autoPlay>
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );

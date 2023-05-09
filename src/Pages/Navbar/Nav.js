@@ -48,7 +48,7 @@ const Nav = () => {
         activeClass="active"
         offset={-70}
         duration={500}
-        className="text-gray-800 hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+        className="text-gray-800 hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
         Home
       </Link>
@@ -60,7 +60,7 @@ const Nav = () => {
         smooth={true}
         offset={-50}
         duration={500}
-        className="text-gray-800 hover:text-blue-500 font-semibold  duration-500 cursor-pointer p-1"
+        className="text-gray-800 hover:text-primary font-semibold  duration-500 cursor-pointer p-1"
       >
         Feature
       </Link>
@@ -72,7 +72,7 @@ const Nav = () => {
         smooth={true}
         offset={-50}
         duration={500}
-        className="text-gray-800 hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+        className="text-gray-800 hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
         How it's work
       </Link>
@@ -84,7 +84,7 @@ const Nav = () => {
         activeClass="active"
         offset={-50}
         duration={500}
-        className="text-gray-800  hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+        className="text-gray-800  hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
         Why this app
       </Link>
@@ -96,7 +96,7 @@ const Nav = () => {
         activeClass="active"
         offset={-50}
         duration={500}
-        className="text-gray-800  hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+        className="text-gray-800  hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
         Review's
       </Link>
@@ -108,7 +108,7 @@ const Nav = () => {
         smooth={true}
         offset={-50}
         duration={500}
-        className="text-gray-800 hover:text-blue-500 font-semibold duration-500 cursor-pointer p-1"
+        className="text-gray-800 hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
         FAQ
       </Link>
@@ -118,16 +118,16 @@ const Nav = () => {
   return (
     <>
       <Navbar
-        className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-3"
+        className="sticky inset-0 z-10 h-max max-w-full shadow-none rounded-none py-2 px-4 lg:px-8 lg:py-3"
         ref={menuRef}
       >
         <div className="flex items-center justify-between text-blue-gray-900">
           <img className="w-10" src={logo} alt="..." />
           <div className="flex items-center gap-2">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <PrimaryButton className="rounded-full text-sm hidden lg:inline-block">
+            <Button className="hidden bg-buttonColor  lg:inline-block">
               Get Started
-            </PrimaryButton>
+            </Button>
 
             <IconButton
               variant="text"

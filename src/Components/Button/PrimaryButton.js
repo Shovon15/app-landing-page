@@ -3,10 +3,7 @@ import React from "react";
 
 const PrimaryButton = ({ className, children }) => {
   return (
-    <Button
-      className={`${className} bg-buttonColor focus:outline-none  `}
-      onMouseDown={(e) => e.preventDefault()}
-    >
+    <Button className={`${className} bg-buttonColor focus:outline-none`}>
       {children}
     </Button>
   );

@@ -8,7 +8,7 @@ import SectionTitle from "../../Components/Text/SectionTitle";
 import faqImg from "../../assets/section icons/faq.png";
 
 export default function Faq() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(1);
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
@@ -19,14 +19,18 @@ export default function Faq() {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={`${
-          id === open ? "rotate-180" : ""
-        } h-7 w-7 transition-transform  bg-indigo-600 text-white rounded-lg`}
+          id === open ? "rotate-45 " : ""
+        } h-7 w-7 transition duration-500 transform`}
         fill="none"
         viewBox="0 0 24 24"
+        strokeWidth={1.5}
         stroke="currentColor"
-        strokeWidth={2}
       >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 4.5v15m7.5-7.5h-15"
+        />
       </svg>
     );
   }
@@ -37,7 +41,7 @@ export default function Faq() {
   };
 
   return (
-    <div id="faq" className="min-h-max bg-indigo-100  p-10 md:px-40">
+    <div id="faq" className="min-h-max my-10 px-5 md:px-10 ">
       <img src={faqImg} alt="..." className="w-20 m-1 mx-auto" />
       <SectionTitle title="FAQ!" />
 

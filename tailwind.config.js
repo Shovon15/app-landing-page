@@ -5,14 +5,14 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        primary: "#3949AB",
+        primary: "#4b0082",
         secondary: "#121212",
-        buttonColor: "#2196F3",
+        buttonColor: "#4b0082",
         textPrimary: "#121212",
       },
     },
     fontFamily: {
-      sans: ["Raleway", "sans-serif"],
+      sans: ["Roboto", "sans-serif"],
     },
   },
   plugins: [],
