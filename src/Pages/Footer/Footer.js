@@ -1,77 +1,64 @@
 import { Typography } from "@material-tailwind/react";
-import logo from "../../assets/logos/app-store.png";
+import logo from "../../assets/logos/logo.png";
 import { BsTelephone } from "react-icons/bs";
-import { GoLocation } from "react-icons/go";
-import appStore from "../../assets/footer/app1.png";
-import googlePlay from "../../assets/footer/gp1.png";
+import { MdOutlineEmail } from "react-icons/md";
+import { AiOutlineFacebook } from "react-icons/ai";
+import { AiOutlineYoutube } from "react-icons/ai";
+import { AiOutlineLinkedin } from "react-icons/ai";
 
 export default function Footer() {
   return (
-    <footer className=" bg-gray-200 p-8">
-      <div className="flex flex-row flex-wrap items-start justify-start  gap-y-6 gap-x-12  text-start md:justify-between">
+    <footer className="px-5 md:px-10 py-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-y-6 gap-x-12 text-start md:justify-between">
         <div>
-          <img src={logo} alt="logo-ct" className="w-20" />
+          <img src={logo} alt="logo-ct" className="w-44" />
           <p className="text-wrap pt-5 pl-0 text-start">
-            Lorem Ipsum is simply dummy text of the printing and type.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
           </p>
+
+          <div className="flex gap-2 text-2xl py-5 cursor-pointer">
+            <AiOutlineFacebook className="" />
+            <AiOutlineYoutube />
+            <AiOutlineLinkedin />
+          </div>
         </div>
-        <ul className="flex flex-col md:flex-row gap-y-3 md:gap-y-0  gap-x-12">
-          <li>
-            <Typography
-              as="a"
-              //   href="#"
-              color="blue-gray"
-              className="font-bold transition-colors hover:text-blue-500 focus:text-blue-500  cursor-pointer"
-            >
-              About Us
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              //   href="#"
-              color="blue-gray"
-              className="font-bold transition-colors hover:text-blue-500 focus:text-blue-500  cursor-pointer"
-            >
-              License
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              //   href="#"
-              color="blue-gray"
-              className="font-bold transition-colors hover:text-blue-500 focus:text-blue-500  cursor-pointer"
-            >
-              Contribute
-            </Typography>
-          </li>
-        </ul>
         <div className="flex flex-col gap-2">
-          <p className="text-start font-semibold">Contact</p>
+          <p className="text-start text-2xl font-semibold">Contact Info</p>
           <div className="flex flex-col gap-2">
+            <p className="text-md mb-2">
+              Delta Dahlia Tower (Level 06), 36 Kemal Ataturl Avenue, Banani,
+              Dhaka-1213
+            </p>
             <span className="flex  gap-2">
               <BsTelephone />
-              <p>+0098278278247</p>
+              <p>+88 018 800 88553</p>
             </span>
             <span className="flex gap-2">
-              <GoLocation />
-              <p>
-                380 St Kilda Road,
-                <br /> Melbourne, Australia
-              </p>
+              <MdOutlineEmail />
+              <p>info@swap.com.bd</p>
             </span>
-            <div className="flex flex-row gap-x-2">
-              <img src={appStore} alt="..." className="cursor-pointer" />
-
-              <img src={googlePlay} alt="..." className="cursor-pointer" />
-            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2">
+          <p className="text-start text-2xl font-semibold">
+            Feature & Benefits
+          </p>
+          <div className="flex flex-col  gap-2">
+            <li>Features</li>
+            <li>Plans & Pricing</li>
+            {/* <span className="flex  gap-2">
+            </span>
+            <span className="flex gap-2">
+            </span> */}
           </div>
         </div>
       </div>
-      <hr className="my-8 border-blue-gray-200" />
+      <hr className="my-4 border-blue-gray-200" />
       <Typography color="blue-gray" className="text-center font-normal">
-        &copy; 2023 Abcd App
+        Copyright &copy; 2023 Supershop All right reserved
       </Typography>
     </footer>
   );

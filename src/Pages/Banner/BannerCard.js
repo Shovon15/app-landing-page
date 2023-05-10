@@ -21,9 +21,10 @@ const BannerCard = () => {
     },
   ];
   return (
-    <div className="flex flex-col md:flex-row gap-6 mx-12">
+    <div className="flex flex-col md:flex-row gap-6 px-6 md:px-12 mb-10 ">
       {items.map((item, i) => (
         <div
+          key={i}
           className="parent transform transition duration-300 hover:scale-110 border border-gray-300
            hover:border-primary p-5 rounded-xl cursor-pointer text-start"
         >

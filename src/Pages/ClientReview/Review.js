@@ -4,76 +4,87 @@ import Carousel from "react-elastic-carousel";
 import avatar1 from "../../assets/review/user5.jpg";
 import avatar2 from "../../assets/review/user6.jpg";
 import avatar3 from "../../assets/review/user4.jpg";
-import clientImg from "../../assets/section icons/client.png";
-
-import SectionTitle from "../../Components/Text/SectionTitle";
 import CarouselCard from "../../Components/Card/CarouselCard";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Review = () => {
   const carouselRef = React.createRef(null);
   let resetTimeout;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", updateWindowWidth);
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth);
+    };
+  }, []);
+  // console.log(windowWidth);
 
   const items = [
     {
       avatar: avatar1,
       name: "Danny Sims",
-      desig: "Lorem Ipsum",
+      desig: "Swap",
       review: 4,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar2,
       name: "John Smith",
-      desig: "Lorem Ipsum is",
+      desig: "Swap",
       review: 4.5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar1,
       name: "Taya Barr",
-      desig: "Lorem Ipsum is",
+      desig: "Swap",
       review: 3.2,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar3,
       name: "Omar Hodge",
-      desig: "Lorem Ipsum",
+      desig: "Swap",
       review: 4.5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar2,
       name: "Ellis Jarvis",
-      desig: "Lorem Ipsum is",
+      desig: "Swap",
       review: 4.5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar3,
       name: "Jenny Stein",
-      desig: "Lorem Ipsum ",
+      desig: "Swap",
       review: 5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar3,
       name: "Omar Hodge",
-      desig: "Lorem Ipsum",
+      desig: "Swap",
       review: 4.5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar2,
       name: "Ellis Jarvis",
-      desig: "Lorem Ipsum is",
+      desig: "Swap",
       review: 4.5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
     {
       avatar: avatar3,
       name: "Jenny Stein",
-      desig: "Lorem Ipsum ",
+      desig: "Swap",
       review: 5,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
     },
@@ -94,27 +105,32 @@ const Review = () => {
     },
     {
       width: 1000,
-      itemsToShow: 3,
+      itemsToShow: 2,
     },
   ];
+  let length = 8;
+  if (windowWidth >= 550) {
+    length = 7;
+  }
   return (
-    <div id="review" className="min-h-max bg-slate-100 py-5 md:py-10">
-      <img src={clientImg} alt="..." className="w-20  mx-auto" />
-      <SectionTitle title="Client Review" />
+    <div id="review" className="min-h-max bg-slate-100 p-5 md:p-10">
+      <p className="text-primary  text-start md:text-center text-3xl md:text-5xl font-bold p-2">
+        Why people are using supershop
+      </p>
+      <p className="text-xl text-start md:text-center p-2 pb-5">
+        Join millions of other customer on this platform
+      </p>
       <Carousel
         breakPoints={breakPoints}
         ref={carouselRef}
         enableMouseSwipe={true}
-        // itemsToShow={3}
         itemsToScroll={1}
-        // renderArrow={myArrow}
         pagination={false}
-        // renderPagination={myPagination}
         enableAutoPlay={true}
         autoPlaySpeed={2500}
         onNextEnd={({ index }) => {
           // console.log("index", index, "length", items.length);
-          if (index === 6) {
+          if (index === length) {
             clearTimeout(resetTimeout);
             resetTimeout = setTimeout(() => {
               carouselRef?.current?.goTo(0);

@@ -8,6 +8,8 @@ import Features from "./Feature/Features";
 import WhyThisApp from "./WhyThisApp/WhyThisApp";
 import AppFunction from "./AppFunction/AppFunction";
 import BannerCard from "./Banner/BannerCard";
+import Register from "./Register/Register";
+import Pricing from "./Pricing/Pricing";
 
 const LandingPage = () => {
   return (
@@ -16,8 +18,10 @@ const LandingPage = () => {
       <Banner />
       <BannerCard />
       <Features />
-      <AppFunction />
-      <WhyThisApp />
+      <Register />
+      {/* <AppFunction />
+      <WhyThisApp /> */}
+      <Pricing />
       <Review />
       <Faq />
       <Footer />

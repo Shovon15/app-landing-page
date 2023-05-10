@@ -41,8 +41,8 @@ export default function Faq() {
   };
 
   return (
-    <div id="faq" className="min-h-max my-10 px-5 md:px-10 ">
-      <img src={faqImg} alt="..." className="w-20 m-1 mx-auto" />
+    <div id="faq" className="min-h-max py-10 px-5 md:px-10 ">
+      {/* <img src={faqImg} alt="..." className="w-20 m-1 mx-auto" /> */}
       <SectionTitle title="FAQ!" />
 
       <Fragment>

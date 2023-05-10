@@ -1,16 +1,12 @@
-import { Button, Typography } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import React from "react";
-import background from "../../assets/banner/imageedit_5_6379001357.jpg";
-import banner from "../../assets/banner/slider-moc-2-1.png";
-import PrimaryButton from "../../Components/Button/PrimaryButton";
-import TypeAnimationText from "../../Components/Text/TypeAnimationText";
 import video from "../../assets/video/Autodemo - The Explainer and Demo Video Leader..mp4";
 
 const Banner = () => {
   return (
     <div
       id="home"
-      className="flex flex-col lg:flex-row px-5 md:px-10 bg-slate-300  py-10 lg:py-10  min-h-max"
+      className="flex flex-col lg:flex-row px-5 md:px-10 bg-slate-300  py-5 md:py-10  min-h-max"
     >
       <div className="w-full lg:w-13/24 flex flex-col justify-center p-2 gap-4">
         <p className="font-extrabold text-start text-4xl md:text-6xl">
@@ -24,12 +20,9 @@ const Banner = () => {
         </p>
 
         <div className="flex flex-col md:flex-row mx-auto md:mx-0 gap-4">
-          <Button variant="content" className="bg-buttonColor ">
-            Start A Free Trial
-          </Button>
+          <Button className="bg-buttonColor ">Start A Free Trial</Button>
           <Button
             variant="outlined"
-            ripple="dark"
             className="border-buttonColor text-buttonColor  focus:ring-0"
           >
             Request A Demo

@@ -14,92 +14,66 @@ import featureImg from "../../assets/section icons/features.png";
 import { Typography } from "@material-tailwind/react";
 
 const Features = () => {
-  const check = [
-    {
-      icon: <BsCheckCircle />,
-      text: "Lorem Ipsum is simply dummy text",
-    },
-    {
-      icon: <BsCheckCircle />,
-      text: "Lorem Ipsum is simply dummy text",
-    },
-    {
-      icon: <BsCheckCircle />,
-      text: "Lorem Ipsum is simply dummy text",
-    },
-  ];
-
   const items = [
     {
       icon: <VscWorkspaceTrusted />,
-      color: "green",
+      color: "bg-green-200",
       title: "Fully Secured",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     },
     {
       icon: <VscLayers />,
-      color: "indigo",
+      color: "bg-indigo-200",
       title: "Well Organized",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     },
     {
       icon: <VscFileCode />,
-      color: "teal",
+      color: "bg-teal-200",
       title: "Clean coding",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     },
     {
       icon: <MdOutlineSpeed />,
-      color: "cyan",
+      color: "bg-cyan-200",
       title: "Hi speedy app",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    },
+    {
+      icon: <VscWorkspaceTrusted />,
+      color: "bg-blue-200",
+      title: "Invoicing",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    },
+    {
+      icon: <VscLayers />,
+      color: "bg-purple-200",
+      title: "Expenses",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    },
+    {
+      icon: <VscFileCode />,
+      color: "bg-red-200",
+      title: "Inventory",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    },
+    {
+      icon: <MdOutlineSpeed />,
+      color: "bg-orange-200",
+      title: "Reports",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     },
   ];
   return (
-    // <div id="feature" className="py-5 md:py-10 min-h-screen bg-slate-100">
-    //   <SectionTitle title="Awesome Apps Features" />
+    <div id="feature" className="min-h-max px-5 md:px-12 py-5">
+      <p className=" text-primary py-2 bg- text-3xl text-start md:text-center md:text-5xl font-bold">
+        Features that helps you run your business
+      </p>
 
-    //   <SectionText
-    //     title="A Private Limited is the most popular type of partnership Malta. The
-    //     limited liability is, in fact, the only type of company allowed by
-    //     Companies."
-    //   />
-
-    //   <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-10/12 mx-auto my-10">
-    //     {items.map((item, i) => (
-    //       <FeatureCard key={i} item={item} />
-    //     ))}
-    //   </div>
-    // </div>
-    <div id="feature" className="flex flex-col md:flex-row min-h-max">
-      <div className="w-full md:w-5/12 p-6">
-        <img src={featureImg} alt="..." className="w-20 m-1" />
-        <Typography className="text-start text-indigo-600 pb-2" variant="h3">
-          Awesome Apps Features
-        </Typography>
-        <Typography className="text-start" variant="paragraph">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </Typography>
-        <div>
-          {check.map((item, i) => (
-            <div className="flex justify-start items-center gap-2 m-3 md:gap-5 md:m-8">
-              <span className="text-4xl hover:text-blue-700">{item.icon}</span>
-              <Typography className="text-start" variant="h6">
-                {item.text}
-              </Typography>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="w-full md:w-7/12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-10/12 mx-auto my-10">
-          {items.map((item, i) => (
-            <FeatureCard key={i} item={item} />
-          ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6  my-5">
+        {items.map((item, i) => (
+          <FeatureCard key={i} item={item} />
+        ))}
       </div>
     </div>
   );

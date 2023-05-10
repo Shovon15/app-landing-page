@@ -2,18 +2,16 @@ import React, { useEffect, useRef } from "react";
 import {
   Navbar,
   MobileNav,
-  Typography,
   Button,
   IconButton,
 } from "@material-tailwind/react";
 import { Link } from "react-scroll";
-import logo from "../../assets/logos/app-store.png";
-import PrimaryButton from "../../Components/Button/PrimaryButton";
+import logo from "../../assets/logos/logo.png";
 import "./Nav.css";
 
 const Nav = () => {
   const [openNav, setOpenNav] = React.useState(false);
-  console.log(openNav);
+  // console.log(openNav);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -28,7 +26,7 @@ const Nav = () => {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
         setOpenNav(false);
-        console.log(menuRef.current);
+        // console.log(menuRef.current);
       }
     };
 
@@ -66,7 +64,7 @@ const Nav = () => {
       </Link>
 
       <Link
-        to="how_its_work"
+        to="pricing"
         spy={true}
         activeClass="active"
         smooth={true}
@@ -74,19 +72,7 @@ const Nav = () => {
         duration={500}
         className="text-gray-800 hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
-        How it's work
-      </Link>
-
-      <Link
-        to="why_this_app"
-        spy={true}
-        smooth={true}
-        activeClass="active"
-        offset={-50}
-        duration={500}
-        className="text-gray-800  hover:text-primary font-semibold duration-500 cursor-pointer p-1"
-      >
-        Why this app
+        Pricing
       </Link>
 
       <Link
@@ -122,11 +108,11 @@ const Nav = () => {
         ref={menuRef}
       >
         <div className="flex items-center justify-between text-blue-gray-900">
-          <img className="w-10" src={logo} alt="..." />
+          <img className="w-44" src={logo} alt="..." />
           <div className="flex items-center gap-2">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <Button className="hidden bg-buttonColor  lg:inline-block">
-              Get Started
+              Free Trial
             </Button>
 
             <IconButton
@@ -170,12 +156,9 @@ const Nav = () => {
         </div>
         <MobileNav className="flex flex-col" open={openNav}>
           {navList}
-          <PrimaryButton variant="gradient" fullWidth className="rounded-full ">
-            Get Started
-          </PrimaryButton>
-          {/* <Button variant="gradient" size="sm" className="mb-2">
-            <span>Buy Now</span>
-          </Button> */}
+          <Button className="rounded-md bg-primary mr-auto px-10">
+            Free Trial
+          </Button>
         </MobileNav>
       </Navbar>
     </>
