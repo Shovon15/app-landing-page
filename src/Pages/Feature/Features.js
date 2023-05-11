@@ -1,17 +1,9 @@
 import React from "react";
-// import FeatureCard from "../../../Components/Card/FeatureCard";
-// import SectionHeading from "../../../Components/Text/SectionHeading";
-// import SectionText from "../../../Components/Text/SectionText";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { VscFileCode } from "react-icons/vsc";
 import { VscLayers } from "react-icons/vsc";
-import { BsCheckCircle } from "react-icons/bs";
 import { MdOutlineSpeed } from "react-icons/md";
-import SectionTitle from "../../Components/Text/SectionTitle";
 import FeatureCard from "../../Components/Card/FeatureCard";
-import SectionText from "../../Components/Text/SectionText";
-import featureImg from "../../assets/section icons/features.png";
-import { Typography } from "@material-tailwind/react";
 
 const Features = () => {
   const items = [
@@ -65,8 +57,8 @@ const Features = () => {
     },
   ];
   return (
-    <div id="feature" className="min-h-max px-5 md:px-12 py-5">
-      <p className=" text-primary py-2 bg- text-3xl text-start md:text-center md:text-5xl font-bold">
+    <div id="feature" className="min-h-max px-5 md:px-12 py-5 md:py-10">
+      <p className=" text-primary py-2  text-4xl text-start md:text-center md:text-5xl font-bold">
         Features that helps you run your business
       </p>
 

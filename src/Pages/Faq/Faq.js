@@ -4,8 +4,6 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import SectionTitle from "../../Components/Text/SectionTitle";
-import faqImg from "../../assets/section icons/faq.png";
 
 export default function Faq() {
   const [open, setOpen] = useState(1);
@@ -41,9 +39,10 @@ export default function Faq() {
   };
 
   return (
-    <div id="faq" className="min-h-max py-10 px-5 md:px-10 ">
-      {/* <img src={faqImg} alt="..." className="w-20 m-1 mx-auto" /> */}
-      <SectionTitle title="FAQ!" />
+    <div id="faq" className="min-h-max py-5 md:py-10 px-5 md:px-10 ">
+      <p className="text-primary  text-start md:text-center text-3xl md:text-5xl font-bold p-2">
+        FAQ!
+      </p>
 
       <Fragment>
         <Accordion

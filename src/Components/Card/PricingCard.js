@@ -35,7 +35,9 @@ const PricingCard = ({ item, isSwitchOn }) => {
         </p>
       )}
       <p className=" text-sm">{title}</p>
-      <Button fullWidth>{buttonText}</Button>
+      <Button fullWidth className="bg-primary">
+        {buttonText}
+      </Button>
       <hr className="my-2 border-blue-gray-200" />
       <div>
         {feature.map((featureItem, i) => (

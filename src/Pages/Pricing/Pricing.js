@@ -38,7 +38,7 @@ const Pricing = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       buttonText: "Select Pro",
       feature: [
-        "One person Pro",
+        "Two person Pro",
         "Exports to files for easy client viewing",
         "2TB of data for your account",
       ],
@@ -52,7 +52,7 @@ const Pricing = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       buttonText: "Select Team",
       feature: [
-        "One person team",
+        "Multi person team",
         "Exports to files for easy client viewing",
         "2TB of data for your account",
       ],

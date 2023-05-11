@@ -14,7 +14,9 @@ const FeatureCard = ({ item }) => {
       >
         {icon}
       </div>
-      <p className="font-semibold text-3xl text-primary py-2">{title}</p>
+      <p className="font-semibold text-2xl md:text-3xl text-primary py-2">
+        {title}
+      </p>
       <p className="text-slate-800">{text}</p>
     </div>
   );

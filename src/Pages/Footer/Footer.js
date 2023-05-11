@@ -1,10 +1,10 @@
 import { Typography } from "@material-tailwind/react";
 import logo from "../../assets/logos/logo.png";
 import { BsTelephone } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
-import { AiOutlineFacebook } from "react-icons/ai";
-import { AiOutlineYoutube } from "react-icons/ai";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import { CiMail } from "react-icons/ci";
+import { ImFacebook2 } from "react-icons/im";
+import { ImYoutube } from "react-icons/im";
+import { ImLinkedin } from "react-icons/im";
 
 export default function Footer() {
   return (
@@ -19,10 +19,16 @@ export default function Footer() {
             and scrambled it to make a type specimen book.
           </p>
 
-          <div className="flex gap-2 text-2xl py-5 cursor-pointer">
-            <AiOutlineFacebook className="" />
-            <AiOutlineYoutube />
-            <AiOutlineLinkedin />
+          <div className="flex gap-5 text-2xl py-5  text-gray-800">
+            <a href="https://www.facebook.com/" className="cursor-pointer ">
+              <ImFacebook2 />
+            </a>
+            <a href="https://www.youtube.com/" className="cursor-pointer">
+              <ImYoutube />
+            </a>
+            <a href="https://www.linkedin.com/" className="cursor-pointer">
+              <ImLinkedin />
+            </a>
           </div>
         </div>
         <div className="flex flex-col gap-2">
@@ -37,7 +43,7 @@ export default function Footer() {
               <p>+88 018 800 88553</p>
             </span>
             <span className="flex gap-2">
-              <MdOutlineEmail />
+              <CiMail className="text-lg" />
               <p>info@swap.com.bd</p>
             </span>
           </div>
@@ -49,10 +55,6 @@ export default function Footer() {
           <div className="flex flex-col  gap-2">
             <li>Features</li>
             <li>Plans & Pricing</li>
-            {/* <span className="flex  gap-2">
-            </span>
-            <span className="flex gap-2">
-            </span> */}
           </div>
         </div>
       </div>
