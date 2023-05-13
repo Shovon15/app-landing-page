@@ -1,6 +1,5 @@
 import { Button } from "@material-tailwind/react";
 import React from "react";
-import video from "../../assets/video/Autodemo - The Explainer and Demo Video Leader..mp4";
 
 const Banner = () => {
   return (
@@ -31,7 +30,7 @@ const Banner = () => {
       </div>
       <div className="w-full lg:w-11/24 md:p-2 mt-2 md:mt-0">
         <video className="h-full w-full rounded-lg" controls autoPlay>
-          <source src={video} type="video/mp4" />
+          <source src="" type="video/mp4" />
         </video>
       </div>
     </div>
