@@ -13,10 +13,9 @@ export default function Footer() {
         <div>
           <img src={logo} alt="logo-ct" className="w-44" />
           <p className="text-wrap pt-5 pl-0 text-start">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Try our Supershop today and experience the benifits of streamlined
+            financial management for your business.Sign up for a free trial or
+            contact us for more information.
           </p>
 
           <div className="flex gap-5 text-2xl py-5  text-gray-800">

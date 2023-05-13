@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div
       id="home"
-      className="flex flex-col lg:flex-row px-5 md:px-10 bg-slate-300  py-5 md:py-10  min-h-max"
+      className="flex flex-col lg:flex-row px-10 py-5 bg-slate-300 min-h-max"
     >
       <div className="w-full lg:w-13/24 flex flex-col justify-center p-2 gap-4">
         <p className="font-extrabold text-start text-4xl md:text-6xl">
@@ -14,9 +14,9 @@ const Banner = () => {
           one place
         </p>
         <p className="text-lg text-start  text-wrap py-2">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took.
+          Supershop can handle all of your financial management needs, including
+          accounts payable and receivable, general ledger, and financial
+          statements.
         </p>
 
         <div className="flex flex-col md:flex-row mx-auto md:mx-0 gap-4">
@@ -32,7 +32,6 @@ const Banner = () => {
       <div className="w-full lg:w-11/24 md:p-2 mt-2 md:mt-0">
         <video className="h-full w-full rounded-lg" controls autoPlay>
           <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
     </div>

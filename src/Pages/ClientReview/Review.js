@@ -1,9 +1,10 @@
 import React from "react";
 
 import Carousel from "react-elastic-carousel";
-import avatar1 from "../../assets/review/user5.jpg";
+import avatar1 from "../../assets/review/user1.jpg";
 import avatar2 from "../../assets/review/user6.jpg";
 import avatar3 from "../../assets/review/user4.jpg";
+import avatar4 from "../../assets/review/user5.jpg";
 import CarouselCard from "../../Components/Card/CarouselCard";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -27,66 +28,31 @@ const Review = () => {
   const items = [
     {
       avatar: avatar1,
-      name: "Danny Sims",
+      name: "Sanjida Ahamed",
       desig: "Swap",
       review: 4,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+      text: "Supershop has really helped me to be more efficient throughout the year so that tax time...it's less stressful.",
     },
     {
       avatar: avatar2,
-      name: "John Smith",
+      name: "Tanjin Afroz",
       desig: "Swap",
       review: 4.5,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+      text: "Supershop has really helped me to be more efficient throughout the year so that tax time...it's less stressful.",
     },
     {
-      avatar: avatar1,
-      name: "Taya Barr",
+      avatar: avatar3,
+      name: "Maria Tanjin",
       desig: "Swap",
       review: 3.2,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+      text: "Supershop has really helped me to be more efficient throughout the year so that tax time...it's less stressful.",
     },
     {
-      avatar: avatar3,
-      name: "Omar Hodge",
+      avatar: avatar4,
+      name: "Omar Faruq",
       desig: "Swap",
       review: 4.5,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
-    },
-    {
-      avatar: avatar2,
-      name: "Ellis Jarvis",
-      desig: "Swap",
-      review: 4.5,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
-    },
-    {
-      avatar: avatar3,
-      name: "Jenny Stein",
-      desig: "Swap",
-      review: 5,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
-    },
-    {
-      avatar: avatar3,
-      name: "Omar Hodge",
-      desig: "Swap",
-      review: 4.5,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
-    },
-    {
-      avatar: avatar2,
-      name: "Ellis Jarvis",
-      desig: "Swap",
-      review: 4.5,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
-    },
-    {
-      avatar: avatar3,
-      name: "Jenny Stein",
-      desig: "Swap",
-      review: 5,
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text .",
+      text: "Supershop has really helped me to be more efficient throughout the year so that tax time...it's less stressful.",
     },
   ];
 
@@ -108,9 +74,11 @@ const Review = () => {
       itemsToShow: 2,
     },
   ];
-  let length = 8;
+
+  // ----------------for reviwe slide number length (-1)--------------------------
+  let length = 3;
   if (windowWidth >= 550) {
-    length = 7;
+    length = 2;
   }
   return (
     <div id="review" className="min-h-max bg-slate-100 p-5 md:p-10">
@@ -134,7 +102,7 @@ const Review = () => {
             clearTimeout(resetTimeout);
             resetTimeout = setTimeout(() => {
               carouselRef?.current?.goTo(0);
-            }, 2000); // same time
+            }, 2500); // same time
           }
         }}
       >

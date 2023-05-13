@@ -8,6 +8,7 @@ import Features from "./Feature/Features";
 import BannerCard from "./Banner/BannerCard";
 import Register from "./Register/Register";
 import Pricing from "./Pricing/Pricing";
+import FreeTrial from "./FreeTrialSection/FreeTrial";
 
 const LandingPage = () => {
   return (
@@ -17,9 +18,10 @@ const LandingPage = () => {
       <BannerCard />
       <Features />
       <Register />
-      <Pricing />
       <Review />
+      <Pricing />
       <Faq />
+      <FreeTrial />
       <Footer />
     </div>
   );

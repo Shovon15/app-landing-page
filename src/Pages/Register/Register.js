@@ -41,11 +41,11 @@ const Register = () => {
           </p>
           <p className="text-xl md:text-2xl ">
             We offer excelent customer support and training resourses to help
-            you get the most out of our software
+            you get the most out of our software.
           </p>
           <Button
             variant="outlined"
-            className="border-white text-white focus:ring-0 mr-auto"
+            className="border-white text-white focus:ring-0 mr-auto mt-4"
           >
             Register for free
           </Button>

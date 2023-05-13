@@ -10,7 +10,7 @@ const FeatureCard = ({ item }) => {
     hover:text-slate-700 shadow-none"
     >
       <div
-        className={` w-20 h-20 p-4 rounded-full ${color} text-5xl text-white`}
+        className={`w-20 h-20 p-4 rounded-full ${color} text-3xl text-white flex justify-center items-center`}
       >
         {icon}
       </div>

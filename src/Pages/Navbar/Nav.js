@@ -62,6 +62,17 @@ const Nav = () => {
       >
         Feature
       </Link>
+      <Link
+        to="review"
+        spy={true}
+        smooth={true}
+        activeClass="active"
+        offset={-50}
+        duration={500}
+        className="text-gray-800  hover:text-primary font-semibold duration-500 cursor-pointer p-1"
+      >
+        Review's
+      </Link>
 
       <Link
         to="pricing"
@@ -73,18 +84,6 @@ const Nav = () => {
         className="text-gray-800 hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
         Pricing
-      </Link>
-
-      <Link
-        to="review"
-        spy={true}
-        smooth={true}
-        activeClass="active"
-        offset={-50}
-        duration={500}
-        className="text-gray-800  hover:text-primary font-semibold duration-500 cursor-pointer p-1"
-      >
-        Review's
       </Link>
 
       <Link

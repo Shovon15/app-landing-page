@@ -5,33 +5,32 @@ const BannerCard = () => {
   const items = [
     {
       title: "Getting things done easily",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.dummy text of the printing and typesetting industry ",
+      text: "Our accounting software simplifies your financial management with powerful features and an easy-to-use interface.",
     },
     {
       title: "Easy to use",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.dummy text of the printing and typesetting industry ",
+      text: "Get organized,save time, and make informed decisions for your business.",
     },
     {
       title: "25+ Integration",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.dummy text of the printing and typesetting industry ",
+      text: "Get organized, save time, and make informed decisions for your business.",
     },
     {
       title: "24/7 Live support",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.dummy text of the printing and typesetting industry ",
+      text: "Get organized, save time, and make informed decisions for your business.",
     },
   ];
   return (
-    <div className="flex flex-col md:flex-row gap-6 px-6 md:px-12 mb-10 ">
+    <div className="flex flex-col md:flex-row gap-6 px-6 md:px-12 mb-5 ">
       {items.map((item, i) => (
         <div
-          key={i}
-          className="parent transform transition duration-300 hover:scale-110 border border-gray-300
-           hover:border-primary p-5 rounded-xl cursor-pointer text-start"
+          className="parent zoom p-5 w-full text-start border hover:border-primary hover:shadow-xl  cursor-pointer rounded-lg 
+       shadow-none"
         >
           <p className="child font-bold text-2xl md:text-4xl  pb-5 pt-2">
             {item.title}
           </p>
-          <p className="text-slate-800 ">{item.text}</p>
+          <p className="text-slate-800">{item.text}</p>
         </div>
       ))}
     </div>

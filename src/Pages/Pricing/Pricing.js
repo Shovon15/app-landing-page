@@ -8,20 +8,15 @@ const Pricing = () => {
   const handleSwitchChange = () => {
     setSwitchOn(!isSwitchOn);
   };
-  //   console.log(isSwitchOn);
-  //   let price = "7";
-  //   if (isSwitchOn) {
-  //     price = "80";
-  //   }
-  //   console.log(price);
+
   const items = [
     {
       packageName: "Lite",
       packageBgColor: "bg-blue-300",
       priceMonth: "7",
-      priceYear: "00",
+      priceYear: "84",
       title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Just using thisfor yourself? Lite is the way to go for the lites platform.",
       buttonText: "Select Lite",
       feature: [
         "One person lite",
@@ -33,9 +28,9 @@ const Pricing = () => {
       packageName: "Pro",
       packageBgColor: "bg-red-300",
       priceMonth: "19",
-      priceYear: "00",
+      priceYear: "228",
       title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Just using thisfor yourself? Lite is the way to go for the lites platform.",
       buttonText: "Select Pro",
       feature: [
         "Two person Pro",
@@ -47,9 +42,9 @@ const Pricing = () => {
       packageName: "Team",
       packageBgColor: "bg-blue-300",
       priceMonth: "31",
-      priceYear: "00",
+      priceYear: "372",
       title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Just using thisfor yourself? Lite is the way to go for the lites platform.",
       buttonText: "Select Team",
       feature: [
         "Multi person team",

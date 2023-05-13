@@ -6,10 +6,17 @@ import {
 } from "@material-tailwind/react";
 
 export default function Faq() {
-  const [open, setOpen] = useState(1);
-
+  const [open, setOpen] = useState(0);
+  const items = [
+    {
+      title: "What is online accounting software?",
+      content:
+        "Online accounting software is sometimes called 'cloud-based software'.It allows users to create, store and send invoices from any device. YOu dont't need anythings saved on your computer, and there are no disks to load. Simply log in on a web browser and jump right into your Supershop online account. Your personal data and settings are right there, stored safely in 'the cloud'.",
+    },
+  ];
   const handleOpen = (value) => {
-    setOpen(open === value ? 0 : value);
+    setOpen(open === value ? "" : value);
+    console.log(value);
   };
 
   function Icon({ id, open }) {
@@ -17,7 +24,7 @@ export default function Faq() {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={`${
-          id === open ? "rotate-45 " : ""
+          id === open ? "rotate-45" : ""
         } h-7 w-7 transition duration-500 transform`}
         fill="none"
         viewBox="0 0 24 24"
@@ -43,69 +50,40 @@ export default function Faq() {
       <p className="text-primary  text-start md:text-center text-3xl md:text-5xl font-bold p-2">
         FAQ!
       </p>
+      <>
+        {items.map((item, index) => (
+          <Accordion
+            open={open === index}
+            icon={<Icon id={index} open={open} />}
+            animate={customAnimation}
+          >
+            <AccordionHeader onClick={() => handleOpen(index)}>
+              {item.title}
+            </AccordionHeader>
+            <AccordionBody className="text-start">{item.content}</AccordionBody>
+          </Accordion>
+        ))}
+      </>
 
-      <Fragment>
+      {/* <>
         <Accordion
           open={open === 1}
           animate={customAnimation}
           icon={<Icon id={1} open={open} />}
         >
           <AccordionHeader onClick={() => handleOpen(1)}>
-            What should I include in App?
+            What is online accounting software?
           </AccordionHeader>
-          <AccordionBody className="text-xl text-start">
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
+          <AccordionBody className="text-md text-start">
+            Online accounting software is sometimes called 'cloud-based
+            software'.It allows users to create, store and send invoices from
+            any device. YOu dont't need anythings saved on your computer, and
+            there are no disks to load. Simply log in on a web browser and jump
+            right into your Supershop online account. Your personal data and
+            settings are right there, stored safely in 'the cloud'.
           </AccordionBody>
         </Accordion>
-        <Accordion
-          open={open === 2}
-          animate={customAnimation}
-          icon={<Icon id={2} open={open} />}
-        >
-          <AccordionHeader onClick={() => handleOpen(2)}>
-            How does the Moodle app work?
-          </AccordionHeader>
-          <AccordionBody className="text-xl text-start">
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-        <Accordion
-          open={open === 3}
-          animate={customAnimation}
-          icon={<Icon id={3} open={open} />}
-        >
-          <AccordionHeader onClick={() => handleOpen(3)}>
-            Can users choose to install the app?
-          </AccordionHeader>
-          <AccordionBody className="text-xl text-start">
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-        <Accordion
-          open={open === 4}
-          animate={customAnimation}
-          icon={<Icon id={4} open={open} />}
-        >
-          <AccordionHeader onClick={() => handleOpen(4)}>
-            How do I disable installed apps?
-          </AccordionHeader>
-          <AccordionBody className="text-xl text-start">
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-      </Fragment>
+      </> */}
     </div>
   );
 }

@@ -1,59 +1,35 @@
 import React from "react";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
-import { VscFileCode } from "react-icons/vsc";
-import { VscLayers } from "react-icons/vsc";
-import { MdOutlineSpeed } from "react-icons/md";
+import { FaFileInvoice } from "react-icons/fa";
+import { BsBoxes } from "react-icons/bs";
+import { IoWalletOutline } from "react-icons/io5";
+import { FaRegChartBar } from "react-icons/fa";
 import FeatureCard from "../../Components/Card/FeatureCard";
 
 const Features = () => {
   const items = [
     {
-      icon: <VscWorkspaceTrusted />,
-      color: "bg-green-200",
-      title: "Fully Secured",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    },
-    {
-      icon: <VscLayers />,
-      color: "bg-indigo-200",
-      title: "Well Organized",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    },
-    {
-      icon: <VscFileCode />,
-      color: "bg-teal-200",
-      title: "Clean coding",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    },
-    {
-      icon: <MdOutlineSpeed />,
-      color: "bg-cyan-200",
-      title: "Hi speedy app",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    },
-    {
-      icon: <VscWorkspaceTrusted />,
-      color: "bg-blue-200",
+      icon: <FaFileInvoice />,
+      color: "bg-primary",
       title: "Invoicing",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      text: "Reduce unpain invoices,keep tabs on your income,and get paid faster-for the low price for FREE",
     },
     {
-      icon: <VscLayers />,
-      color: "bg-purple-200",
+      icon: <IoWalletOutline />,
+      color: "bg-primary",
       title: "Expenses",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      text: "Get set for tax time with all your expenses organised in one place.",
     },
     {
-      icon: <VscFileCode />,
-      color: "bg-red-200",
+      icon: <BsBoxes />,
+      color: "bg-primary",
       title: "Inventory",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      text: "Stay on top of your orders and quantities while managing your inventory in real-time",
     },
     {
-      icon: <MdOutlineSpeed />,
-      color: "bg-orange-200",
+      icon: <FaRegChartBar />,
+      color: "bg-primary",
       title: "Reports",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      text: "Stay on top of your orders and quantities while managing your inventory in real-time",
     },
   ];
   return (
