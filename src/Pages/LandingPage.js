@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "./Banner/Banner";
 import Faq from "./Faq/Faq";
 import Nav from "./Navbar/Nav";
-import Review from "./ClientReview/Review";
+// import Review from "./ClientReview/Review";
 import Footer from "./Footer/Footer";
 import Features from "./Feature/Features";
 import BannerCard from "./Banner/BannerCard";
