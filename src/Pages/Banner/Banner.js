@@ -1,6 +1,7 @@
 import { Button } from "@material-tailwind/react";
 import React from "react";
 import { Link } from "react-scroll";
+import bannerImg from "../../assets/video/bannerImg.png";
 
 const Banner = () => {
   return (
@@ -47,10 +48,11 @@ const Banner = () => {
           </Button> */}
         </div>
       </div>
-      <div className="w-full lg:w-11/24 md:p-2 mt-2 md:mt-0">
-        <video className="h-full w-full rounded-lg" controls autoPlay>
+      <div className="w-full lg:w-11/24 md:p-2 mt-5 md:mt-0 ">
+        {/* <video className="h-full w-full rounded-lg" controls autoPlay>
           <source src="" type="video/mp4" />
-        </video>
+        </video> */}
+        <img src={bannerImg} alt="..."></img>
       </div>
     </div>
   );

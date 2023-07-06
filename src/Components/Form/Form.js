@@ -29,6 +29,7 @@ const Form = () => {
   const [selectedDiscrict, setSelectedDiscrict] = useState({});
   const [selectedThana, setSelectedThana] = useState({});
   const [isDistrictSelect, setIsDistrictSelect] = useState(false);
+  
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -36,9 +37,9 @@ const Form = () => {
       .then((res) => {
         if (res.status === 200) {
           const distArr = [];
-          res?.data?.data?.map((data) => {
-            distArr.push({ value: data.id, label: data.name });
-          });
+          res?.data?.data?.map((data) =>
+            distArr.push({ value: data.id, label: data.name })
+          );
           setDistrict(distArr);
         }
       })
@@ -206,10 +207,6 @@ const Form = () => {
             <div className="flex flex-col text-start px-10">
               <label>Thana</label>
               <Select
-                // isDisabled={thanas?.length ? false : true}
-                // placeholder={
-                //   thanas?.length ? "select thana" : "first select district"
-                // }
                 value={selectedThana?.label ? selectedThana : ""}
                 onChange={(value) => {
                   setSelectedThana(value);
