@@ -56,6 +56,7 @@ export default function Faq() {
             open={open === index}
             icon={<Icon id={index} open={open} />}
             animate={customAnimation}
+            key={index}
           >
             <AccordionHeader onClick={() => handleOpen(index)}>
               {item.title}

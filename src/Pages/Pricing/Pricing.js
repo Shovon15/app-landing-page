@@ -70,7 +70,7 @@ const Pricing = () => {
             <p className="text-black font-extrabold">Monthly</p>
           )}
         </span>
-        <label className="flex items-center relative w-max cursor-pointer focus: select-none">
+        <label className="flex items-center relative w-max cursor-pointer focus:select-none">
           <input
             onChange={handleSwitchChange}
             type="checkbox"
@@ -88,7 +88,7 @@ const Pricing = () => {
       </div>
       {/* ------------------------------------ */}
 
-      <div className="flex flex-col md:flex-row gap-5 mx-5 lg:mx-48 my-5 md:my-10">
+      <div className="flex flex-col md:flex-row gap-5 mx-5 md:mx-10 lg:mx-48 my-5 md:my-10">
         {items.map((item, i) => (
           <PricingCard key={i} item={item} isSwitchOn={isSwitchOn} />
         ))}

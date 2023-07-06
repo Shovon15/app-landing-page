@@ -1,25 +1,11 @@
 import { Button } from "@material-tailwind/react";
 import React from "react";
 import img from "../../assets/screen/register.jpg";
-import logoimg from "../../assets/logos/company-logo.png";
+import logoimg from "../../assets/logos/livewire.png";
+import { Link } from "react-scroll";
 
 const Register = () => {
   const logos = [
-    {
-      logoimg,
-    },
-    {
-      logoimg,
-    },
-    {
-      logoimg,
-    },
-    {
-      logoimg,
-    },
-    {
-      logoimg,
-    },
     {
       logoimg,
     },
@@ -43,21 +29,30 @@ const Register = () => {
             We offer excelent customer support and training resourses to help
             you get the most out of our software.
           </p>
-          <Button
-            variant="outlined"
-            className="border-white text-white focus:ring-0 mr-auto mt-4"
+          <Link
+            to="register"
+            spy={true}
+            smooth={true}
+            activeClass="active"
+            offset={-60}
+            duration={500}
           >
-            Register for free
-          </Button>
+            <Button
+              variant="outlined"
+              className="border-white text-white focus:ring-0 mr-auto mt-4"
+            >
+              Register for free
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="p-5 md:p-10">
         <p className="text-primary text-4xl md:text-5xl font-bold text-start md:text-center py-2">
-          Trusted by more than 100 company
+          Our Trusted Users
         </p>
         <div className="flex flex-wrap justify-center items-center gap-5 py-5 md:py-10">
           {logos.map((logo, i) => (
-            <img key={i} src={logo.logoimg} alt="..." />
+            <img key={i} src={logo.logoimg} alt="..." className="w-44" />
           ))}
         </div>
       </div>

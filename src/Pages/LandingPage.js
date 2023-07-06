@@ -9,19 +9,23 @@ import BannerCard from "./Banner/BannerCard";
 import Register from "./Register/Register";
 import Pricing from "./Pricing/Pricing";
 import FreeTrial from "./FreeTrialSection/FreeTrial";
+import Form from "../Components/Form/Form";
+import RegistrationForm from "../Components/Form/RegistrationForm";
 
 const LandingPage = () => {
   return (
     <div>
       <Nav />
       <Banner />
-      <BannerCard />
+      {/* <BannerCard /> */}
       <Features />
       <Register />
-      <Review />
-      <Pricing />
+      {/* <Review /> */}
+      {/* <Pricing /> */}
       <Faq />
       <FreeTrial />
+      <Form />
+      {/* <RegistrationForm /> */}
       <Footer />
     </div>
   );

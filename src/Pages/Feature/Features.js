@@ -1,44 +1,48 @@
 import React from "react";
-import { FaFileInvoice } from "react-icons/fa";
+import { TbBinaryTree2 } from "react-icons/tb";
 import { BsBoxes } from "react-icons/bs";
-import { IoWalletOutline } from "react-icons/io5";
-import { FaRegChartBar } from "react-icons/fa";
+import { TbReportMoney } from "react-icons/tb";
+import { FaMoneyCheckAlt } from "react-icons/fa";
 import FeatureCard from "../../Components/Card/FeatureCard";
 
 const Features = () => {
   const items = [
     {
-      icon: <FaFileInvoice />,
-      color: "bg-primary",
-      title: "Invoicing",
-      text: "Reduce unpain invoices,keep tabs on your income,and get paid faster-for the low price for FREE",
-    },
-    {
-      icon: <IoWalletOutline />,
-      color: "bg-primary",
-      title: "Expenses",
-      text: "Get set for tax time with all your expenses organised in one place.",
-    },
-    {
       icon: <BsBoxes />,
       color: "bg-primary",
-      title: "Inventory",
-      text: "Stay on top of your orders and quantities while managing your inventory in real-time",
+      title: "Real Time Inventory",
+      text1: "Real time inventory syncing for online and instore sales",
+      text2: "Faster brand new, preowned product management",
     },
     {
-      icon: <FaRegChartBar />,
+      icon: <TbBinaryTree2 />,
       color: "bg-primary",
-      title: "Reports",
-      text: "Stay on top of your orders and quantities while managing your inventory in real-time",
+      title: "Multibranch at one place",
+      text1: "Connect all your store and manage from one place",
+      text2: "",
+    },
+    {
+      icon: <TbReportMoney />,
+      color: "bg-primary",
+      title: "Accurate Accounting and Dynamic Reporting",
+      text1: "Monitor your financials,track your payments",
+      text2: "Grow your business with data driven insights",
+    },
+    {
+      icon: <FaMoneyCheckAlt />,
+      color: "bg-primary",
+      title: "Revenue based quick loan",
+      text1: "Get access to finance in no timer based on your revenue",
+      text2: "",
     },
   ];
   return (
     <div id="feature" className="min-h-max px-5 md:px-12 py-5 md:py-10">
       <p className=" text-primary py-2  text-4xl text-start md:text-center md:text-5xl font-bold">
-        Features that helps you run your business
+        Features that helps to grow your business
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6  my-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6  my-5">
         {items.map((item, i) => (
           <FeatureCard key={i} item={item} />
         ))}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import {
   Navbar,
   MobileNav,
@@ -8,10 +8,11 @@ import {
 import { Link } from "react-scroll";
 import logo from "../../assets/logos/logo.png";
 import "./Nav.css";
+import { ScrollContext } from "../../Context/ScrollPosition";
 
 const Nav = () => {
   const [openNav, setOpenNav] = React.useState(false);
-  // console.log(openNav);
+  const { scrollPosition } = useContext(ScrollContext);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -62,7 +63,7 @@ const Nav = () => {
       >
         Feature
       </Link>
-      <Link
+      {/* <Link
         to="review"
         spy={true}
         smooth={true}
@@ -84,7 +85,7 @@ const Nav = () => {
         className="text-gray-800 hover:text-primary font-semibold duration-500 cursor-pointer p-1"
       >
         Pricing
-      </Link>
+      </Link> */}
 
       <Link
         to="faq"
@@ -103,16 +104,29 @@ const Nav = () => {
   return (
     <>
       <Navbar
-        className="sticky inset-0 z-10 h-max max-w-full shadow-none rounded-none py-2 px-4 lg:px-8 lg:py-3"
+        className={`sticky inset-0 z-10 h-max max-w-full transition-shadow bg-white border-none rounded-none py-2 px-4 lg:px-8 lg:py-3  ${
+          scrollPosition > 0
+            ? "shadow-[0_25px_30px_-15px_rgba(0,0,0,0.2)]"
+            : "shadow-none"
+        }`}
         ref={menuRef}
       >
         <div className="flex items-center justify-between text-blue-gray-900">
           <img className="w-44" src={logo} alt="..." />
           <div className="flex items-center gap-2">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <Button className="hidden bg-buttonColor  lg:inline-block">
-              Free Trial
-            </Button>
+            <Link
+              to="register"
+              spy={true}
+              smooth={true}
+              activeClass="active"
+              offset={-60}
+              duration={500}
+            >
+              <Button className="hidden bg-buttonColor  lg:inline-block">
+                Free Trial
+              </Button>
+            </Link>
 
             <IconButton
               variant="text"
@@ -155,9 +169,18 @@ const Nav = () => {
         </div>
         <MobileNav className="flex flex-col" open={openNav}>
           {navList}
-          <Button className="rounded-md bg-primary mr-auto px-10">
-            Free Trial
-          </Button>
+          <Link
+            to="register"
+            spy={true}
+            smooth={true}
+            activeClass="active"
+            offset={-60}
+            duration={500}
+          >
+            <Button className="rounded-md bg-primary mr-auto px-10">
+              Free Trial
+            </Button>
+          </Link>
         </MobileNav>
       </Navbar>
     </>

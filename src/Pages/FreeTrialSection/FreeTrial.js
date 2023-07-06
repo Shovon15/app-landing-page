@@ -1,5 +1,6 @@
 import { Button } from "@material-tailwind/react";
 import React from "react";
+import { Link } from "react-scroll";
 
 const FreeTrial = () => {
   return (
@@ -13,12 +14,21 @@ const FreeTrial = () => {
           streamlined financial management for your business. Sign up for a free
           trial or contact us for more information.
         </p>
-        <Button
-          variant="outlined"
-          className="border-white text-white focus:ring-0  mt-4"
+        <Link
+          to="register"
+          spy={true}
+          smooth={true}
+          activeClass="active"
+          offset={-60}
+          duration={500}
         >
-          Register for free
-        </Button>
+          <Button
+            variant="outlined"
+            className="border-white text-white focus:ring-0  mt-4"
+          >
+            Register for free
+          </Button>
+        </Link>
       </div>
     </div>
   );

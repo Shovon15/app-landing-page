@@ -9,8 +9,8 @@ import { ImLinkedin } from "react-icons/im";
 export default function Footer() {
   return (
     <footer className="px-5 md:px-10 py-5">
-      <div className="grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-y-6 gap-x-12 text-start md:justify-between">
-        <div>
+      <div className="flex flex-col md:flex-row  items-start justify-start gap-y-6 gap-x-12 text-start md:justify-between">
+        <div className="w-full md:w-1/2">
           <img src={logo} alt="logo-ct" className="w-44" />
           <p className="text-wrap pt-5 pl-0 text-start">
             Try our Supershop today and experience the benifits of streamlined
@@ -30,7 +30,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 w-full md:w-1/2">
           <p className="text-start text-2xl font-semibold">Contact Info</p>
           <div className="flex flex-col gap-2">
             <p className="text-md mb-2">
@@ -47,7 +47,7 @@ export default function Footer() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <p className="text-start text-2xl font-semibold">
             Feature & Benefits
           </p>
@@ -55,7 +55,7 @@ export default function Footer() {
             <li>Features</li>
             <li>Plans & Pricing</li>
           </div>
-        </div>
+        </div> */}
       </div>
       <hr className="my-4 border-blue-gray-200" />
       <Typography color="blue-gray" className="text-center font-normal">
