@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { get } from "../../Utils/fetchApi";
 import { showErrorToast, showSuccessToast } from "../../Utils/toastAlert";
 import Select from "react-select";
+import "./form.css";
 
 const Form = () => {
   const rootUrl = "https://dev-pos.supershop.ai/api/v1/";
@@ -29,7 +30,7 @@ const Form = () => {
   const [selectedDiscrict, setSelectedDiscrict] = useState({});
   const [selectedThana, setSelectedThana] = useState({});
   const [isDistrictSelect, setIsDistrictSelect] = useState(false);
-  
+
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -54,6 +55,7 @@ const Form = () => {
   }, []);
 
   const handleInputChange = (e) => {
+    setErrors({ ...errors, [e.target.name]: "" });
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -109,6 +111,26 @@ const Form = () => {
       });
   };
 
+  const customStyles = {
+    control: (provided, state) => ({
+      ...provided,
+      borderColor: state.isFocused ? "#4b0082" : "#4b0082",
+      "&:hover": {
+        borderColor: state.isFocused ? "#4b0082" : "#4b0082",
+      },
+      boxShadow: state.isFocused ? "none" : provided.boxShadow,
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? "#4b0082" : provided.backgroundColor,
+      color: state.isSelected ? "#ffffff" : "#4b0082",
+    }),
+    singleValue: (provided, state) => ({
+      ...provided,
+      color: state.isSelected ? "#ffffff" : provided.color,
+    }),
+  };
+
   return (
     <div id="register">
       <Card className="py-5 md:py-10 my-5 md:mx-10 bg-gray-100 shadow-none rounded-none">
@@ -116,7 +138,7 @@ const Form = () => {
           Registration
         </p>
         <form onSubmit={handleFormSubmit}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
             <div className="flex flex-col text-start px-10">
               <label className="">
                 Name
@@ -126,7 +148,7 @@ const Form = () => {
                 name="name"
                 onChange={handleInputChange}
                 type="text"
-                className="h-10 rounded-md px-2 border border-primary"
+                className="h-10 rounded-md px-2 border-0-5 "
                 placeholder="Name"
                 value={values?.name}
               />
@@ -143,7 +165,7 @@ const Form = () => {
                 name="business_name"
                 onChange={handleInputChange}
                 type="text"
-                className="h-10 rounded-md px-2 border border-primary"
+                className="h-10 rounded-md px-2 border-0-5"
                 placeholder="Business Name"
                 value={values?.business_name}
               />
@@ -160,7 +182,7 @@ const Form = () => {
                 name="email"
                 onChange={handleInputChange}
                 type="email"
-                className="h-10 rounded-md px-2 border border-primary"
+                className="h-10 rounded-md px-2 border-0-5"
                 placeholder="Email"
                 value={values?.email}
               />
@@ -177,7 +199,7 @@ const Form = () => {
                 name="phone_number"
                 onChange={handleInputChange}
                 type="text"
-                className="h-10 rounded-md px-2 border border-primary"
+                className="h-10 rounded-md px-2 border-0-5"
                 placeholder="Phone number"
                 value={values?.phone_number}
               />
@@ -197,7 +219,7 @@ const Form = () => {
                   setIsDistrictSelect(true);
                 }}
                 options={districts}
-                className="border border-primary rounded-md"
+                styles={customStyles}
               />
               {!isValided && (
                 <p className="text-red-500">{errors?.district_id?.[0]}</p>
@@ -212,7 +234,7 @@ const Form = () => {
                   setSelectedThana(value);
                 }}
                 options={thanas}
-                className="border border-primary rounded-md"
+                styles={customStyles}
               />
               {!isValided && errors?.thana_id?.[0] && (
                 <p className="text-red-500">{errors?.thana_id?.[0]}</p>
@@ -229,7 +251,7 @@ const Form = () => {
                 name="address"
                 onChange={handleInputChange}
                 type="name"
-                className="h-10 rounded-md px-2 border border-primary"
+                className="h-10 rounded-md px-2 border-0-5"
                 placeholder="Address"
                 value={values?.address}
               />
@@ -238,7 +260,7 @@ const Form = () => {
               )}
             </div>
           </div>
-          <Button type="submit" className="bg-buttonColor px-12 mt-5 md:mt-2">
+          <Button type="submit" className="bg-buttonColor px-12 mt-5">
             Register
           </Button>
         </form>

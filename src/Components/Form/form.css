@@ -1,0 +1,9 @@
+
+.border-0-5{
+    border: 1px #4b0082 solid !important;
+}
+
+.border-0-5:focus{
+    outline: none;
+}
+
