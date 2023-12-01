@@ -1,7 +1,7 @@
 import { Button } from "@material-tailwind/react";
 import React from "react";
 import img from "../../assets/screen/register.jpg";
-import logoimg from "../../assets/logos/livewire.png";
+import logoimg from "../../assets/logos/supershop.jpg";
 import { Link } from "react-scroll";
 
 const Register = () => {

@@ -13,22 +13,22 @@ import Form from "../Components/Form/Form";
 import RegistrationForm from "../Components/Form/RegistrationForm";
 
 const LandingPage = () => {
-  return (
-    <div>
-      <Nav />
-      <Banner />
-      {/* <BannerCard /> */}
-      <Features />
-      <Register />
-      {/* <Review /> */}
-      {/* <Pricing /> */}
-      <Faq />
-      <FreeTrial />
-      <Form />
-      {/* <RegistrationForm /> */}
-      <Footer />
-    </div>
-  );
+	return (
+		<div>
+			<Nav />
+			<Banner />
+			<BannerCard />
+			<Features />
+			<Register />
+			{/* <Review /> */}
+			<Pricing />
+			<Faq />
+			<FreeTrial />
+			<Form />
+			{/* <RegistrationForm /> */}
+			<Footer />
+		</div>
+	);
 };
 
 export default LandingPage;
